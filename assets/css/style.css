@@ -16,6 +16,55 @@ hr {
   display: none;
 } /* rimuove l'elemento */
 
+.social,
+.toTop {
+  line-height: 1;
+  position: fixed;
+  right: -18px;
+  z-index: 999;
+}
+
+.social {
+  top: 16px;
+}
+
+.toTop {
+  bottom: 16px;
+}
+
+@media screen and (max-width: 700px) {
+  .social {
+    top: unset;
+    bottom: 96px;
+  }
+}
+
+.toTop a,
+.social a {
+  color: #f7575e;
+  font-size: 2rem;
+  display: block;
+}
+
+.social a {
+  color: rgb(45, 101, 185);
+}
+
+.social a:first-child {
+  margin-bottom: 1rem;
+}
+
+.toTop .far,
+.social .far {
+  background: #ffffffa1;
+  backdrop-filter: blur(6px);
+  line-height: 0.8;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+  padding: 16px;
+  border: 3px solid white;
+}
+
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
@@ -132,22 +181,45 @@ h1 {
   margin-bottom: 0.7em;
 }
 
-@media screen and (min-width: 500px) and (max-width: 1199px) {
+/* h1 span::after {
+  content: url("../img/ornamento.svg");
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 999;
+} */
+
+h1 span {
+  position: relative;
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
   h1 span img {
     position: absolute;
-    width: 75%;
-    top: 8.5rem;
+    width: 100%;
+    top: 4rem;
+    left: 0;
     opacity: 0.5;
     z-index: 999;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  h1 span img {
+    position: absolute;
+    width: 100%;
+    top: 4rem;
     left: 0;
+    opacity: 0.5;
+    z-index: 999;
   }
 }
 
 @media screen and (min-width: 1200px) {
   h1 span img {
     position: absolute;
-    width: 45%;
-    top: 3.5rem;
+    width: 100%;
+    top: 4rem;
+    left: 0;
     opacity: 0.5;
     z-index: 999;
   }
@@ -333,6 +405,7 @@ input {
   border: 0;
   border-bottom: 1px dashed #333;
 }
+
 button {
   padding: 4px 7px;
   background-color: #3f6bca;
@@ -340,12 +413,14 @@ button {
   color: white;
   font-weight: bold;
 }
+
 @media screen and (min-width: 500px) {
   input {
     display: inline-block;
     width: 70%;
   }
 }
+
 @media screen and (min-width: 700px) {
   input {
     padding: 15px;
@@ -364,6 +439,7 @@ aside h2 {
   text-transform: uppercase;
   margin-bottom: 1em;
 }
+
 aside div {
   background-color: #e3e3e3;
   border: 1px solid #c3c3c3;
@@ -378,6 +454,7 @@ aside div {
     margin-inline: -2px;
   }
 }
+
 aside div p:last-child {
   margin-bottom: 0;
   font-size: 0.8em;
@@ -397,6 +474,7 @@ footer {
   padding: 1em;
   text-align: center;
   font-size: 1.2rem;
+  position: relative;
 }
 
 @media screen and (min-width: 800px) {
